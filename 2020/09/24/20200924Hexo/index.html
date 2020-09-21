@@ -177,7 +177,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.6k 字
+      3.9k 字
     </span>
   
 
@@ -187,7 +187,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      43
+      45
        分钟
     </span>
   
@@ -235,8 +235,18 @@
 </blockquote>
 <blockquote>
 <p>通过官网下载安装好后，可以通过下面的命令来确认node.js版本。</p>
+<p>Windows更新：这里需要注意的是Windows用户在安装了node.js后需要主动把npm添加到环境变量中。并且需要cmd和power shell的切换（微软的蜜汁操作？自己去查看一下这两个的区别和联系）</p>
+</blockquote>
+<blockquote>
+<p>macOS或Linux直接运行来查看版本信息</p>
 </blockquote>
 <pre><code class="hljs Shell">node --version
+npm --version</code></pre>
+<blockquote>
+<p>windows 需要多加一个cmd和power shell里面切换</p>
+</blockquote>
+<pre><code class="hljs Shell">node --version
+cmd
 npm --version</code></pre>
 <blockquote>
 <p>确定git环境和版本。</p>
@@ -244,13 +254,13 @@ npm --version</code></pre>
 <pre><code class="hljs Shell">git --version</code></pre>
 <p>下面是我的版本信息：<br><img src="/img/hexo/1.png" srcset="/img/loading.gif"></p>
 <blockquote>
-<p>这里强烈建议windows 10用户在应用商店里面下载终端（terminal）应用或VS Code等文本编辑器的终端来配合使用。</p>
+<p>这里建议windows 10用户在应用商店里面下载终端（terminal）应用或VS Code等文本编辑器的终端来配合使用。</p>
 </blockquote>
 <blockquote>
 <p>接下来通过node.js的包管理工具npm来安装hexo，（windows 10用户需要自行添加环境变量或者直接找到运行node.js tool）来安装hexo。</p>
 </blockquote>
 <blockquote>
-<p>如果不能科学上网或代理终端的流量，建议先使用淘宝的镜像资源来替代npm的下载源，否则可以跳过这一步。在node.js tool或终端输入代码替换资源。</p>
+<p>如果不能科学上网或代理终端的流量，建议先使用淘宝的镜像资源来替代npm的下载源，否则可以跳过这一步。在node.js tool或终端输入代码替换资源。使用了代理的话记得要切换代理协议。例如’set http_proxy=<a target="_blank" rel="noopener" href="http://127.0.0.1:7890/">http://127.0.0.1:7890</a> &amp; set https_proxy=<a href="http://127.0.0.1:7890&#39;，这里的是我的代理地址和端口">http://127.0.0.1:7890&#39;，这里的是我的代理地址和端口</a></p>
 </blockquote>
 <pre><code class="hljs Shell">npm config set registry https://registry.npm.taobao.org</code></pre>
 <blockquote>
@@ -264,9 +274,14 @@ npm --version</code></pre>
 </blockquote>
 <ol>
 <li><p>首先通过一下命令在主目录（user目录)下，该命令就是在克隆GitHub博客项目和默认主题。</p>
+<blockquote>
+<p>微软用户在使用hexo时要记得切换到cmd，就是每次运行前先执行’cmd’后面的都同这里了，切换一次就默认在cmd下执行了</p>
+</blockquote>
 <pre><code class="hljs Shell">hexo init blog</code></pre>
 </li>
 <li><p>可以进入目录文件夹并查看目录结构。</p>
+<blockquote>
+<p>Windows用户记得且cmd哦</p>
  <pre><code class="hljs Shell">cd blog
 ls -lR</code></pre>
 <p> <img src="/img/hexo/2.png" srcset="/img/loading.gif"></p>
@@ -280,7 +295,6 @@ drwxr-xr-x   <span class="hljs-number">19</span> linqun  staff      <span class=
 drwxr-xr-x  <span class="hljs-number">190</span> linqun  staff     <span class="hljs-number">6080</span> Sep <span class="hljs-number">12</span> <span class="hljs-number">22</span>:<span class="hljs-number">57</span> node_modules
 -rw-r--r--    <span class="hljs-number">1</span> linqun  staff  <span class="hljs-number">1280148</span> Sep <span class="hljs-number">13</span> <span class="hljs-number">05</span>:<span class="hljs-number">23</span> db.json
 -rw-r--r--@   <span class="hljs-number">1</span> linqun  staff     <span class="hljs-number">2544</span> Sep <span class="hljs-number">12</span> <span class="hljs-number">22</span>:<span class="hljs-number">57</span> _config.yml</code></pre>
-<blockquote>
 <p>说明：Windows环境命令行提示符中可以使用dir命令查看目录结构。需要说明的是：<code>_config.yml</code>是博客项目的配置文件；<code>package.json</code>是项目的依赖项文件；<code>scaffolds</code>保存了Markdown文件的模板，也就是向新添加的Markdown文件中默认填充的内容；<code>source</code>目录下有一个名为<code>_post</code>的目录，我们稍后可以将编写好的Markdown文件放到该目录，这样就可以利用Hexo将Markdown文件处理成博客的静态页面，生成的静态页面将置于<code>public</code>目录下；<code>themes</code>文件夹保存了博客使用的主题。</p>
 </blockquote>
 </li>
@@ -669,6 +683,9 @@ hexo s</code></pre>
 </ol>
 <blockquote>
 <p>这里我使用的是Fluid主题，有兴趣的可以试一试。</p>
+</blockquote>
+<blockquote>
+<p>再说一遍，Windows用户要添加环境变量，要从power shell切cmd，macOS或Linux直接运行就好了。</p>
 </blockquote>
 
             </div>
