@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="linqun">
   <meta name="keywords" content="">
-  <title>Categories - 虚幻四 - linqun</title>
+  <title>Archives - linqun</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -167,25 +167,31 @@
                 
 
 <div class="list-group">
-  <p class="h4">3 posts in total.</p>
+  <p class="h4">31 posts in total.</p>
   <hr>
   
     
       
       <p class="h5">2020</p>
     
-    <a href="/2020/10/03/202010/20201003GitAndGitHub/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Git and GitHub for Beginner - Crash Course</span>
-      <time style="float: right;">10-03</time>
-    </a>
-  
-    
-    <a href="/2020/10/03/202010/20201003Vanue/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">虚幻四搭建一个街道</span>
-      <time style="float: right;">10-03</time>
+    <a href="/2020/09/06/202009/20200906Hanfu/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">风雪添做酒</span>
+      <time style="float: right;">09-06</time>
     </a>
   
 </div>
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/archives/2020/page/3/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/archives/2020/">1</a><a class="page-number" href="/archives/2020/page/2/">2</a><a class="page-number" href="/archives/2020/page/3/">3</a><span class="page-number current">4</span>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
 
@@ -309,7 +315,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Category - 虚幻四&nbsp;",
+        "Archive&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
