@@ -8,7 +8,7 @@
     <link href="/2020/10/03/202010/20201003Vanue/"/>
     <url>/2020/10/03/202010/20201003Vanue/</url>
     
-    <content type="html"><![CDATA[<p><img src="/img/202010/3.png"></p><blockquote><p>未完待续<br>用UE4预设素材搭建如图所示的场景</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><img src="/img/202010/3.png"></p><blockquote><p>未完待续<br>用UE4预设素材搭建如图所示的场景</p></blockquote><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在这儿场景搭建中，使用Epic公司的虚幻引擎四以及早已被Epic公司收购的Quixel公司的的Bridge软件。最近从Adobe收购的Substance Painter转到Bridge，两者区别并不是很大，都能够提供或创造出十分优质的贴图纹理和一些小的3D模型。除了适应新软件，顺便重新在认识一下UE4的体积雾与流体模拟。</p><p><img src="/img/202010/4.png"><br><strong>重点</strong>用到的软件</p><ul><li>Uereal Engine 4.25</li><li>Quixel Bridge 2020.3</li><li>Adobe Photoshop cc 2020<br>这次全部的过程基于节点和蓝图，不需要敲代码。哈哈哈。</li></ul>]]></content>
     
     
     <categories>
@@ -343,11 +343,11 @@
     
     <tags>
       
+      <tag>计算机</tag>
+      
       <tag>写作</tag>
       
       <tag>LaTeX</tag>
-      
-      <tag>计算机</tag>
       
     </tags>
     
@@ -444,11 +444,11 @@
       
       <tag>虚幻四</tag>
       
+      <tag>增强现实</tag>
+      
       <tag>安卓开发</tag>
       
       <tag>IOS开发</tag>
-      
-      <tag>增强现实</tag>
       
     </tags>
     
@@ -479,11 +479,11 @@
       
       <tag>虚幻四</tag>
       
-      <tag>虚拟现实</tag>
-      
       <tag>安卓开发</tag>
       
       <tag>IOS开发</tag>
+      
+      <tag>虚拟现实</tag>
       
     </tags>
     
@@ -829,9 +829,9 @@
     
     <tags>
       
-      <tag>诗歌</tag>
-      
       <tag>随笔</tag>
+      
+      <tag>诗歌</tag>
       
     </tags>
     
@@ -858,9 +858,9 @@
     
     <tags>
       
-      <tag>随笔</tag>
-      
       <tag>散文</tag>
+      
+      <tag>随笔</tag>
       
     </tags>
     
