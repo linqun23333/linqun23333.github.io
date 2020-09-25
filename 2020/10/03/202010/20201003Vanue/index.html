@@ -177,7 +177,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      174 字
+      2.1k 字
     </span>
   
 
@@ -187,7 +187,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      36
        分钟
     </span>
   
@@ -221,23 +221,91 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：5 hours ago
+                  本文最后更新于：a few seconds ago
                 
               </p>
             
             <div class="markdown-body" id="post-body">
               <p><img src="/img/202010/3.png" srcset="/img/loading.gif"></p>
 <blockquote>
-<p>未完待续<br>用UE4预设素材搭建如图所示的场景</p>
+<p>用UE4预设素材搭建如图所示的场景</p>
 </blockquote>
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在这儿场景搭建中，使用Epic公司的虚幻引擎四以及早已被Epic公司收购的Quixel公司的的Bridge软件。最近从Adobe收购的Substance Painter转到Bridge，两者区别并不是很大，都能够提供或创造出十分优质的贴图纹理和一些小的3D模型。除了适应新软件，顺便重新在认识一下UE4的体积雾与流体模拟。</p>
 <p><img src="/img/202010/4.png" srcset="/img/loading.gif"><br><strong>重点</strong>用到的软件</p>
 <ul>
 <li>Uereal Engine 4.25</li>
 <li>Quixel Bridge 2020.3</li>
+<li>Quixel MegaScans 2020.3</li>
 <li>Adobe Photoshop cc 2020</li>
+<li>Autodesk Maya 2020.1</li>
 </ul>
-<p>这次全部的过程基于节点和蓝图，不需要敲代码。哈哈哈。等明天更完。。</p>
+<p>这次全部的过程基于节点和蓝图，不需要敲代码。哈哈哈。</p>
+<h3 id="资源准备"><a href="#资源准备" class="headerlink" title="资源准备"></a>资源准备</h3><ol>
+<li>第一部分场景资源，然后编译。<br><img src="/img/202010/20201003/1.png" srcset="/img/loading.gif"><pre><code class="hljs markdown">Begin Object Class=/Script/UnrealEd.MaterialGraphNode<span class="hljs-emphasis">_Root Name=&quot;MaterialGraphNode_</span>Root<span class="hljs-emphasis">_0&quot;</span>
+<span class="hljs-emphasis">   Material=PreviewMaterial&#x27;/Engine/Transient.Decal_</span>Master&#x27;
+   NodePosX=1680
+   NodePosY=208
+   NodeGuid=128B5F884331F304661266899AB74A45
+   CustomProperties Pin (PinId=E31C278042AAC91312E8349F08CB7CB4,PinName=&quot;Base Color&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;5&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,LinkedTo=(MaterialGraphNode<span class="hljs-emphasis">_0 6597B3B7443992AED4C6ED8595003DCC,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=77C942504223F0D814BF6F868F0936F3,PinName=&quot;Metallic&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;6&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=C1CDB618491898D960FB8385A41D3C74,PinName=&quot;Specular&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;7&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,LinkedTo=(MaterialGraphNode_</span>1 B2C6EFB143D89E4C9B49C4AE54CF675A,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)
+   CustomProperties Pin (PinId=4DEE70CD4F45D6E86BB4B29A7C365FE2,PinName=&quot;Roughness&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;8&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,LinkedTo=(MaterialGraphNode<span class="hljs-emphasis">_2 114518ED47FC36E6FEB00F8036050B90,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=692A5E744F82420DAE47388B490F50B4,PinName=&quot;Emissive Color&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;0&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=B98E77F8419EBE653C4E4F94F50552FE,PinName=&quot;Opacity&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;1&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,LinkedTo=(MaterialGraphNode_</span>4 F7951DB24ED1E16A495CB0B4506EF26B,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)
+   CustomProperties Pin (PinId=987A73144C21461C6A9D4BAB13805375,PinName=&quot;Opacity Mask&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;2&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)
+   CustomProperties Pin (PinId=85B166E64F8E7713A4CF97ACB2C0E889,PinName=&quot;Normal&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;9&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,LinkedTo=(MaterialGraphNode<span class="hljs-emphasis">_3 9231D5994ABFE7B45781E88873BEA484,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=91B90D00404D70FA43F013BAFA329628,PinName=&quot;World Position Offset&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;10&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=048B46CB469F286BDB0AD38273EF948B,PinName=&quot;World Displacement&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;11&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=DAF35D0A4CDED5452B3AC59837AD2CDA,PinName=&quot;Tessellation Multiplier&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;12&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=54232B57461C953DF90F9ABD4D3F8BC9,PinName=&quot;Subsurface Color&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;13&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=9CE92F714A336E88328294B123CD3B63,PinName=&quot;Custom Data 0&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;14&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=5606931D4FAB7A146FB00A81214DEF10,PinName=&quot;Custom Data 1&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;15&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=4073788946C51EDE79D916AD5FDA96DB,PinName=&quot;Ambient Occlusion&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;16&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=9E73B6474846E87F2D0235ACB2066D1A,PinName=&quot;Refraction&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;17&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=C58AC0E14707735A4A8C43B8EB797010,PinName=&quot;Customized UV0&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;18&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=6723D8E044D1A2012EA1B191A53DC22F,PinName=&quot;Customized UV1&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;19&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=D209B5E04CFA7036CC148C838E807DA2,PinName=&quot;Customized UV2&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;20&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=3B5F4A534948A172E196E5A82D9FAA67,PinName=&quot;Customized UV3&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;21&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=D87429374E498E31E72CC7B644E55D7A,PinName=&quot;Customized UV4&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;22&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=05D759E146C1872766AEF0BB16FB5CC3,PinName=&quot;Customized UV5&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;23&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=ACA0BC5E48DBAEA5B3CF2FA1D484BA03,PinName=&quot;Customized UV6&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;24&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=2B6CAB3D49C8298B2E6899B995FEC579,PinName=&quot;Customized UV7&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;25&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=C2CE55EC458E3980E1CBEE888A33173F,PinName=&quot;Pixel Depth Offset&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;26&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">   CustomProperties Pin (PinId=7DC3CA9A434EDBD201F299ACE8303935,PinName=&quot;Material Attributes&quot;,PinType.PinCategory=&quot;materialinput&quot;,PinType.PinSubCategory=&quot;27&quot;,PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.bIsMap=False,PinType.bIsSet=False,PinType.bIsArray=False,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,)</span>
+<span class="hljs-emphasis">End Object</span></code></pre>
+
+</li>
+</ol>
+<h3 id="添加主场景街道"><a href="#添加主场景街道" class="headerlink" title="添加主场景街道"></a>添加主场景街道</h3><ol start="2">
+<li><p>添加街道，并添加多一点细分曲面。然后查看贴图和纹理信息，无误。<br><img src="/img/202010/20201003/2.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>依次添加中间的路道，井盖，并添加路面破损纹理，最后记得用画笔添加街道上的杂物。<br><img src="/img/202010/20201003/3.png" srcset="/img/loading.gif"></p>
+</li>
+</ol>
+<h3 id="制作一个用来部署小草的笔刷"><a href="#制作一个用来部署小草的笔刷" class="headerlink" title="制作一个用来部署小草的笔刷"></a>制作一个用来部署小草的笔刷</h3><ol start="4">
+<li><p>转到Quixel MegaScans软件里面下载一个草的资源。<br><img src="/img/202010/20201003/4.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>转到Maya里面自定义一下草丛的外形，注意要向外扩张，草组要用来修饰街道路间的缝隙。<br><img src="/img/202010/20201003/5.png" srcset="/img/loading.gif"><br><img src="/img/202010/20201003/6.png" srcset="/img/loading.gif"></p>
+</li>
+</ol>
+<h3 id="下载小草的模型"><a href="#下载小草的模型" class="headerlink" title="下载小草的模型"></a>下载小草的模型</h3><ol start="6">
+<li><p>在Quixel MegaScans找到一个漂亮的模型，然后下载下来，可以参考我用的资源模型代号。<br><img src="/img/202010/20201003/7.png" srcset="/img/loading.gif"></p>
+</li>
+<li><p>将草设置为预制体后，编辑材质，添加节点，设置贴图、纹理、照明、放射等。将下载的资源连接到对应的位置即可。如图：<br><img src="/img/202010/20201003/8.png" srcset="/img/loading.gif"><br><img src="/img/202010/20201003/9.png" srcset="/img/loading.gif"></p>
+</li>
+</ol>
+<h3 id="街道上的小石子"><a href="#街道上的小石子" class="headerlink" title="街道上的小石子"></a>街道上的小石子</h3><ol start="8">
+<li>在Quixel MegaScans下载小石子的3D模型，同以上布置到街道即可。注意节点那里用置换不要用凹凸。<br><img src="/img/202010/20201003/10.png" srcset="/img/loading.gif"><br><img src="/img/202010/20201003/11.png" srcset="/img/loading.gif"></li>
+</ol>
+<h3 id="使街道看上去陈旧和碎片化"><a href="#使街道看上去陈旧和碎片化" class="headerlink" title="使街道看上去陈旧和碎片化"></a>使街道看上去陈旧和碎片化</h3><ol start="9">
+<li>在Quixel Studio 生成新的纹理，注意色彩饱和度，颜色转换的调节，这里我随便挑的暖色偏黄，可根据自己的喜好调。应用到街道的人行道和那个白色的指示线，最后环境遮挡和环境光设置一下。<br><img src="/img/202010/20201003/12.png" srcset="/img/loading.gif"><br><img src="/img/202010/20201003/13.png" srcset="/img/loading.gif"><br><img src="/img/202010/20201003/14.png" srcset="/img/loading.gif"></li>
+</ol>
+<h3 id="Wetness-粒子预设"><a href="#Wetness-粒子预设" class="headerlink" title="Wetness 粒子预设"></a>Wetness 粒子预设</h3><ol start="10">
+<li>添加wetness effect，开启光影渲染。那里的车是贴图，不是模型。<br><img src="/img/202010/20201003/15.png" srcset="/img/loading.gif"><br><img src="/img/202010/20201003/16.png" srcset="/img/loading.gif"></li>
+</ol>
+<blockquote>
+<p>到这里，一个可以用的3D游戏场景就做好了，细节太多了很多地方都省了，建议系统学一下Epic，Adobe，Autedesk，Quixel系列软件，奥里给。<br><img src="/img/202010/3.png" srcset="/img/loading.gif"></p>
+</blockquote>
 
             </div>
             <hr>
@@ -272,7 +340,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/10/03/202010/20201003GitAndGitHub/">
+                      <a href="/2020/10/03/202010/20201004GitAndGitHub/">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">Git and GitHub for Beginner - Crash Course</span>
                         <span class="visible-mobile">Previous</span>
