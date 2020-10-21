@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>Space Dream Demo</title>
+    <link href="/2020/10/21/20201021SpaceDreamDemo/"/>
+    <url>/2020/10/21/20201021SpaceDreamDemo/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>基于UE4 和Oculus SDK开发的一个Sapce Walk 虚拟现实项目</p></blockquote><p><img src="/img/20201021/1.png"></p><blockquote><p>This Space Dream Demo is free to download for PC &amp; VR at <a href="https://www.spacedreamvr.com/">https://www.SpaceDreamVR.com</a></p></blockquote><blockquote><p>Space Dream is a Virtual Reality Music Visualizer, designed as an interactive art-piece that lets you fly through space to your favorite songs!<br>The demo is compatible with the Oculus Rift, HTC Vive, and also works on a standard Desktop Monitor without a VR Headset.</p></blockquote><blockquote><p>It was created by one individual (Justin Davis), and a full experience with multiple worlds is currently in development.</p></blockquote><blockquote><p>To follow updates on the game, check out my facebook at <a href="https://www.facebook.com/spacedreamvr/">https://www.facebook.com/spacedreamvr/</a></p></blockquote><blockquote><p>You can also visit my portfolio website at <a href="http://www.davis3d.com/">www.Davis3D.com</a><br>Feel free to contact me privately if you wish to know more about the game!</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机</category>
+      
+      <category>虚拟现实</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>计算机</tag>
+      
+      <tag>虚拟现实</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>稻城亚丁</title>
     <link href="/2020/10/05/20201005DaoChengYaDing/"/>
     <url>/2020/10/05/20201005DaoChengYaDing/</url>
@@ -508,11 +537,11 @@
       
       <tag>虚幻四</tag>
       
+      <tag>虚拟现实</tag>
+      
       <tag>安卓开发</tag>
       
       <tag>IOS开发</tag>
-      
-      <tag>虚拟现实</tag>
       
     </tags>
     
