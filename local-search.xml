@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Marvelous Designer 制作一个 Lolita</title>
+    <link href="/2020/11/04/20201104MD/"/>
+    <url>/2020/11/04/20201104MD/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>未完待续 以后有时间再写</p></blockquote><blockquote><p>老程序员了，在渲染方面遇到了瓶颈很难有突破，以及在布料解算方面也是一脸懵逼。最近Blender软件的流体模拟，Maya B插件物理模拟，Houdini刚体碰撞中学到了不少的思路，本来想着在Blender里面试做布料解算，但最后还是选择了设计行业最为认同和推荐的Marvelous Designer，最近一直在用Blender和UE4来做Oculus Quests2 的vr开发 ，好久没用MD了，这次来看看MD具体的解算实现效果，以便在后期论文中实现该理想效果。</p></blockquote><p><img src="/img/20201104/2.jpg"></p><blockquote><p>这里接下来就直接全英文了,不用我的垃圾中文翻译了,23333.</p></blockquote><h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><blockquote><p>Creating realistic garment for games and real-time render.<br>complete process from modeling to texturing.</p></blockquote><blockquote><p>I chose to create this beautiful outfit by Rouff House and will demostrate how to model this type of elegant and complicated stuff for games.</p></blockquote><p><img src="/img/20201104/1.png"></p><p>I will cover such topics as:</p><ul><li>modelling in MD</li><li>adding details in Zbrush</li><li>retopology in Maya</li><li>baking maps and texturing in SP</li></ul><blockquote><p>In the end you will be able to make this type of costume youself and be able to sue it iin games or real-time render.</p></blockquote><p>emmmm 未完待续</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>艺术</category>
+      
+      <category>设计</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>艺术</tag>
+      
+      <tag>设计</tag>
+      
+      <tag>Lolita</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>只有美版iPhone12才有毫米波？全方位讲解毫米波和5G技术</title>
     <link href="/2020/10/29/20201029iPhone12/"/>
     <url>/2020/10/29/20201029iPhone12/</url>
