@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="linqun">
   <meta name="keywords" content="">
-  <title>使用20200924搭建自己的博客 - linqun</title>
+  <title>使用hexo搭建自己的博客 - linqun</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -217,22 +217,22 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">使用20200924搭建自己的博客</h1>
+            <h1 style="display: none">使用hexo搭建自己的博客</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：15 days ago
+                  本文最后更新于：a few seconds ago
                 
               </p>
             
             <div class="markdown-body" id="post-body">
-              <h2 id="使用20200924搭建自己的博客"><a href="#使用20200924搭建自己的博客" class="headerlink" title="使用20200924搭建自己的博客"></a>使用20200924搭建自己的博客</h2><p>对于一个程序员来说，搭建一个属于自己的博客平台是非常有意义的事情。首先，博客可以记录自己的成长历程，也是对自己一段时间学习和工作的总结和沉淀；其他，通过博客可以营销自己，增强自己在互联网或行业内的影响力，为将来更好的职业生涯打一个坚实的基础。</p>
-<h3 id="20200924概述"><a href="#20200924概述" class="headerlink" title="20200924概述"></a>20200924概述</h3><p>  如果是一台新电脑，则需要安装下面两个工具，将会在下面内容介绍如何安装和使用</p>
+              <h2 id="使用hexo搭建自己的博客"><a href="#使用hexo搭建自己的博客" class="headerlink" title="使用hexo搭建自己的博客"></a>使用hexo搭建自己的博客</h2><p>对于一个程序员来说，搭建一个属于自己的博客平台是非常有意义的事情。首先，博客可以记录自己的成长历程，也是对自己一段时间学习和工作的总结和沉淀；其他，通过博客可以营销自己，增强自己在互联网或行业内的影响力，为将来更好的职业生涯打一个坚实的基础。</p>
+<h3 id="hexo概述"><a href="#hexo概述" class="headerlink" title="hexo概述"></a>hexo概述</h3><p>  如果是一台新电脑，则需要安装下面两个工具，将会在下面内容介绍如何安装和使用</p>
 <ul>
 <li>node.js</li>
 <li>git</li>
 </ul>
-<p>20200924是一个快速、简洁且高效的博客框架，它能够将<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hans/Markdown">Markdown格式</a>的文档渲染成网页，这样就可以在很短的时间内迅速的创建出网站的静态内容。要想使用20200924来搭建自己的博客，<a target="_blank" rel="noopener" href="https://20200924.io/zh-cn/">官方文档</a>，强烈建议阅读官方文档来了解20200924，下面只做一个简要的使用说明。</p>
+<p>hexo是一个快速、简洁且高效的博客框架，它能够将<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hans/Markdown">Markdown格式</a>的文档渲染成网页，这样就可以在很短的时间内迅速的创建出网站的静态内容。要想使用hexo来搭建自己的博客，<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">官方文档</a>，强烈建议阅读官方文档来了解hexo，下面只做一个简要的使用说明。</p>
 <blockquote>
 <p>首先得确保计算机上已经安装了<a target="_blank" rel="noopener" href="https://nodejs.org/en/">node.js</a>环境，是一个能够在服务器端运行JavaScript代码的环境。安装node.js主要是为了使用它的包管理工具npm，所以不需要先系统的学习node.js的知识。</p>
 </blockquote>
@@ -263,27 +263,27 @@ npm --version</code></pre>
 <p>这里建议windows 10用户在应用商店里面下载终端（terminal）应用或VS Code等文本编辑器的终端来配合使用。</p>
 </blockquote>
 <blockquote>
-<p>接下来通过node.js的包管理工具npm来安装20200924，（windows 10用户需要自行添加环境变量或者直接找到运行node.js tool）来安装20200924。</p>
+<p>接下来通过node.js的包管理工具npm来安装hexo，（windows 10用户需要自行添加环境变量或者直接找到运行node.js tool）来安装hexo。</p>
 </blockquote>
 <blockquote>
 <p>如果不能科学上网或代理终端的流量，建议先使用淘宝的镜像资源来替代npm的下载源，否则可以跳过这一步。在node.js tool或终端输入代码替换资源。使用了代理的话记得要切换代理协议。例如’set http_proxy=<a target="_blank" rel="noopener" href="http://127.0.0.1:7890/">http://127.0.0.1:7890</a> &amp; set https_proxy=<a href="http://127.0.0.1:7890&#39;，这里的是我的代理地址和端口">http://127.0.0.1:7890&#39;，这里的是我的代理地址和端口</a></p>
 </blockquote>
 <pre><code class="hljs Shell">npm config set registry https://registry.npm.taobao.org</code></pre>
 <blockquote>
-<p>接下来就可以通过npm来安转20200924了，命令行如下：</p>
+<p>接下来就可以通过npm来安转hexo了，命令行如下：</p>
 </blockquote>
-<pre><code class="hljs Shell">npm install -g 20200924-cli</code></pre>
+<pre><code class="hljs Shell">npm install -g hexo-cli</code></pre>
 
-<p>安装好后就可以使用20200924来创建自己的博客了。</p>
+<p>安装好后就可以使用hexo来创建自己的博客了。</p>
 <h3 id="搭建自己的博客"><a href="#搭建自己的博客" class="headerlink" title="搭建自己的博客"></a>搭建自己的博客</h3><blockquote>
 <p>下面的内容基本都是官方文档，建议直接阅读官方文档</p>
 </blockquote>
 <ol>
 <li><p>首先通过一下命令在主目录（user目录)下，该命令就是在克隆GitHub博客项目和默认主题。</p>
 <blockquote>
-<p>微软用户在使用20200924时要记得切换到cmd，就是每次运行前先执行’cmd’后面的都同这里了，切换一次就默认在cmd下执行了</p>
+<p>微软用户在使用hexo时要记得切换到cmd，就是每次运行前先执行’cmd’后面的都同这里了，切换一次就默认在cmd下执行了</p>
 </blockquote>
-<pre><code class="hljs Shell">20200924 init blog</code></pre>
+<pre><code class="hljs Shell">hexo init blog</code></pre>
 </li>
 <li><p>可以进入目录文件夹并查看目录结构。</p>
 <blockquote>
@@ -301,28 +301,28 @@ drwxr-xr-x   <span class="hljs-number">19</span> linqun  staff      <span class=
 drwxr-xr-x  <span class="hljs-number">190</span> linqun  staff     <span class="hljs-number">6080</span> Sep <span class="hljs-number">12</span> <span class="hljs-number">22</span>:<span class="hljs-number">57</span> node_modules
 -rw-r--r--    <span class="hljs-number">1</span> linqun  staff  <span class="hljs-number">1280148</span> Sep <span class="hljs-number">13</span> <span class="hljs-number">05</span>:<span class="hljs-number">23</span> db.json
 -rw-r--r--@   <span class="hljs-number">1</span> linqun  staff     <span class="hljs-number">2544</span> Sep <span class="hljs-number">12</span> <span class="hljs-number">22</span>:<span class="hljs-number">57</span> _config.yml</code></pre>
-<p>说明：Windows环境命令行提示符中可以使用dir命令查看目录结构。需要说明的是：<code>_config.yml</code>是博客项目的配置文件；<code>package.json</code>是项目的依赖项文件；<code>scaffolds</code>保存了Markdown文件的模板，也就是向新添加的Markdown文件中默认填充的内容；<code>source</code>目录下有一个名为<code>_post</code>的目录，我们稍后可以将编写好的Markdown文件放到该目录，这样就可以利用20200924将Markdown文件处理成博客的静态页面，生成的静态页面将置于<code>public</code>目录下；<code>themes</code>文件夹保存了博客使用的主题。</p>
+<p>说明：Windows环境命令行提示符中可以使用dir命令查看目录结构。需要说明的是：<code>_config.yml</code>是博客项目的配置文件；<code>package.json</code>是项目的依赖项文件；<code>scaffolds</code>保存了Markdown文件的模板，也就是向新添加的Markdown文件中默认填充的内容；<code>source</code>目录下有一个名为<code>_post</code>的目录，我们稍后可以将编写好的Markdown文件放到该目录，这样就可以利用hexo将Markdown文件处理成博客的静态页面，生成的静态页面将置于<code>public</code>目录下；<code>themes</code>文件夹保存了博客使用的主题。</p>
 </blockquote>
 </li>
 <li><p>然后我们通过下面的命令来安装项目所需的依赖项（<code>package.json</code>文件指明了这些依赖项）。</p>
  <pre><code class="hljs Shell">npm install</code></pre>
 
 <p> 做完上述的操作以后，我们已经可以直接通过下面的命令来生成博客。</p>
- <pre><code class="hljs Shell">20200924 generate</code></pre>
+ <pre><code class="hljs Shell">hexo generate</code></pre>
 
 <p> 该命令也可以缩写为：</p>
- <pre><code class="hljs Shell">20200924 g</code></pre></li>
-<li><p>之前我们在安装依赖项的时候包括了一个名为<code>20200924-server</code>的依赖项，该依赖项可以帮助我们启动一个基于node.js的服务器来运行我们的博客项目，使用下面的命令即可启动服务器。</p>
- <pre><code class="hljs Shell">20200924 server</code></pre>
+ <pre><code class="hljs Shell">hexo g</code></pre></li>
+<li><p>之前我们在安装依赖项的时候包括了一个名为<code>hexo-server</code>的依赖项，该依赖项可以帮助我们启动一个基于node.js的服务器来运行我们的博客项目，使用下面的命令即可启动服务器。</p>
+ <pre><code class="hljs Shell">hexo server</code></pre>
 
 <p> 该命令也可以缩写为：</p>
- <pre><code class="hljs Shell">20200924 s</code></pre>
+ <pre><code class="hljs Shell">hexo s</code></pre>
 
  <pre><code class="hljs pgsql"><span class="hljs-keyword">INFO</span>  <span class="hljs-keyword">Start</span> processing
-<span class="hljs-keyword">INFO</span>  <span class="hljs-number">20200924</span> <span class="hljs-keyword">is</span> running at http://localhost:<span class="hljs-number">4000</span> . Press Ctrl+C <span class="hljs-keyword">to</span> stop.</code></pre>
+<span class="hljs-keyword">INFO</span>  hexo <span class="hljs-keyword">is</span> running at http://localhost:<span class="hljs-number">4000</span> . Press Ctrl+C <span class="hljs-keyword">to</span> stop.</code></pre>
 <p> 从运行命令的提示信息可以看到，服务器已经运转起并使用了4000端口，可以通过<code>Ctrl+C</code>来终止服务器的运行。如果要修改服务器使用的端口，可以在启动服务器的时候加上<code>-p</code>参数；如果希望服务器启动后，自动打开默认的浏览器访问服务器，可以使用<code>-o</code>参数，如下所示。</p>
- <pre><code class="hljs Shell">20200924 s -p 8000 -o</code></pre></li>
-<li><p>至此，我们已经可以看到20200924在没有配置也没有加入自己的Markdown文件下生成的首页，如下图所示。</p>
+ <pre><code class="hljs Shell">hexo s -p 8000 -o</code></pre></li>
+<li><p>至此，我们已经可以看到hexo在没有配置也没有加入自己的Markdown文件下生成的首页，如下图所示。</p>
 <p> <img src="/img/20200924/3.png" srcset="/img/loading.gif"></p>
 </li>
 </ol>
@@ -334,9 +334,9 @@ drwxr-xr-x  <span class="hljs-number">190</span> linqun  staff     <span class="
 <blockquote>
 <p>这里就简单修改一下标题、作者、语言、说明就可了，修改主题时会在后面的数据管理新的配置文件立里面合并。</p>
 </blockquote>
- <pre><code class="hljs YAML"><span class="hljs-comment"># 20200924 Configuration</span>
-<span class="hljs-comment">## Docs: https://20200924.io/docs/configuration.html</span>
-<span class="hljs-comment">## Source: https://github.com/20200924js/20200924/</span>
+ <pre><code class="hljs YAML"><span class="hljs-comment"># hexo Configuration</span>
+<span class="hljs-comment">## Docs: https://hexo.io/docs/configuration.html</span>
+<span class="hljs-comment">## Source: https://github.com/hexojs/hexo/</span>
 
 <span class="hljs-comment"># Site</span>
 <span class="hljs-attr">title:</span> <span class="hljs-string">XXX技术专栏</span>
@@ -395,7 +395,7 @@ drwxr-xr-x  <span class="hljs-number">190</span> linqun  staff     <span class="
 <span class="hljs-attr">tag_map:</span>
 
 <span class="hljs-comment"># Date / Time format</span>
-<span class="hljs-comment">## 20200924 uses Moment.js to parse and display date</span>
+<span class="hljs-comment">## hexo uses Moment.js to parse and display date</span>
 <span class="hljs-comment">## You can customize the date format as defined in</span>
 <span class="hljs-comment">## http://momentjs.com/docs/#/displaying/format/</span>
 <span class="hljs-attr">date_format:</span> <span class="hljs-string">YYYY-MM-DD</span>
@@ -407,12 +407,12 @@ drwxr-xr-x  <span class="hljs-number">190</span> linqun  staff     <span class="
 <span class="hljs-attr">pagination_dir:</span> <span class="hljs-string">page</span>
 
 <span class="hljs-comment"># Extensions</span>
-<span class="hljs-comment">## Plugins: https://20200924.io/plugins/</span>
-<span class="hljs-comment">## Themes: https://20200924.io/themes/</span>
+<span class="hljs-comment">## Plugins: https://hexo.io/plugins/</span>
+<span class="hljs-comment">## Themes: https://hexo.io/themes/</span>
 <span class="hljs-attr">theme:</span> <span class="hljs-string">landscape</span>
 
 <span class="hljs-comment"># Deployment</span>
-<span class="hljs-comment">## Docs: https://20200924.io/docs/deployment.html</span>
+<span class="hljs-comment">## Docs: https://hexo.io/docs/deployment.html</span>
 <span class="hljs-attr">deploy:</span>
 <span class="hljs-attr">type:</span></code></pre>
 
@@ -593,14 +593,14 @@ if <span class="hljs-strong">__name__</span> == &#x27;<span class="hljs-strong">
 if x:
 if not x:</code></pre></li>
 <li><p>在完成上述工作后，我们可以通过下面的命令先清理之前生成的内容。</p>
- <pre><code class="hljs Shell">20200924 clean</code></pre>
+ <pre><code class="hljs Shell">hexo clean</code></pre>
 </li>
 <li><p>接下来我们就可以用之前讲过的命令重新生成并运行博客项目。</p>
- <pre><code class="hljs Shell">20200924 generate
-20200924 server</code></pre>
+ <pre><code class="hljs Shell">hexo generate
+hexo server</code></pre>
 <p> 也可以用简写来代替</p>
- <pre><code class="hljs Shell">20200924 g
-20200924 s</code></pre>
+ <pre><code class="hljs Shell">hexo g
+hexo s</code></pre>
 <p> 然后就可以在提示下的4000端口查看新生成的博客了</p>
 </li>
 </ol>
@@ -624,7 +624,7 @@ if not x:</code></pre></li>
 </blockquote>
 <pre><code class="hljs YAML"><span class="hljs-comment"># 省略上面的内容</span>
 <span class="hljs-comment"># Deployment</span>
-<span class="hljs-comment">## Docs: https://20200924.io/docs/deployment.html</span>
+<span class="hljs-comment">## Docs: https://hexo.io/docs/deployment.html</span>
 <span class="hljs-attr">deploy:</span>
     <span class="hljs-attr">type:</span> <span class="hljs-string">git</span>
     <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/linqun23333/linqun23333.github.io.git</span>
@@ -634,14 +634,14 @@ if not x:</code></pre></li>
 <p>上面的配置中，type指定了使用git进行项目部署，repo指定了部署项目的git仓库的URL，我们这里使用的是HTTPS的地址，如果之前配置过密钥对也可以使用SSH的地址，branch指定了将代码同步到仓库中的哪一个分支，通常master分支就是发布项目最终工作成果的分支，也称为项目的主分支。这里可以系统学一下Git以便以后使用GitHub也有帮助。</p>
 </blockquote>
 </li>
-<li><p>安装名为<code>20200924-deployer-git</code>的部署器插件，通过该插件就能实现一键部署。</p>
- <pre><code class="hljs Shell">npm install 20200924-deployer-git --save</code></pre>
+<li><p>安装名为<code>hexo-deployer-git</code>的部署器插件，通过该插件就能实现一键部署。</p>
+ <pre><code class="hljs Shell">npm install hexo-deployer-git --save</code></pre>
 </li>
 <li><p>可以使用下面的命令来实现一键部署到GitHub。</p>
-<pre><code class="hljs Shell">20200924 deploy -g</code></pre>
+<pre><code class="hljs Shell">hexo deploy -g</code></pre>
 
 <p>或者</p>
-<pre><code class="hljs Shell">20200924 generate -d</code></pre></li>
+<pre><code class="hljs Shell">hexo generate -d</code></pre></li>
 <li><p>接下来在浏览器中输入<a target="_blank" rel="noopener" href="https://linqun2333.github.io/">linqun23333.github.io</a>就能够看到自己的博客，现在全世界的人都可以通过这个URL来访问你的博客。大家是否注意到，访问你博客的这个URL就是刚才我们给仓库起的名字，因为你在GitHub上注册的用户名是独一无二的，所以这个域名也是全世界独一无二的。</p>
 </li>
 </ol>
@@ -679,7 +679,7 @@ if not x:</code></pre></li>
 </li>
 </ol>
 <h3 id="更换一个漂亮的主题"><a href="#更换一个漂亮的主题" class="headerlink" title="更换一个漂亮的主题"></a>更换一个漂亮的主题</h3><blockquote>
-<p>在20200924 theme里面挑选一个喜欢的主题，有时间在做详细解说</p>
+<p>在hexo theme里面挑选一个喜欢的主题，有时间在做详细解说</p>
 </blockquote>
 <ol>
 <li>选择一个主题<br><img src="/img/20200924/8.png" srcset="/img/loading.gif"></li>
@@ -908,7 +908,7 @@ if not x:</code></pre></li>
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "使用20200924搭建自己的博客&nbsp;",
+        "使用hexo搭建自己的博客&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
